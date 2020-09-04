@@ -18,7 +18,7 @@ $CFG->dboptions = array (
   'dbcollation' => 'utf8mb4_unicode_ci',
 );
 
-$CFG->wwwroot   = 'http://localhost:7777';
+$CFG->wwwroot   = 'http://localhost:7777/kaalomba';
 $CFG->dataroot  = 'C:\\xamppmoodle\\moodledata';
 $CFG->admin     = 'admin';
 
