@@ -1,0 +1,53 @@
+#page-footer {
+    background-color: #8BBF99;
+    text-align: center;
+    min-height: inherit;
+    color: #fff;
+
+    .madewithmoodle {
+        margin-bottom: .5rem;
+        p {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 0;
+            display: inline-block;
+        }
+
+        img {
+            max-width: 100px;
+            margin-top: -12px;
+        }
+    }
+    .madeby {
+        font-size: 14px;
+
+        a {
+            color: #fff;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.footer-copyright {
+    
+    color: white;
+}
+
+#top-footer {
+    background-color: #8BBF99;
+    color: $headings-color;
+
+    h3 {
+        color: $brand-primary;
+    }
+
+    .plugins_standard_footer_html {
+        .mobilefooter a.btn {
+            white-space: inherit;
+        }
+    }
+}

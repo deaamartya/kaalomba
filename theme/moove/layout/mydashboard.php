@@ -62,7 +62,8 @@ $templatecontext = [
     'draweropenright' => $draweropenright,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
-    'canviewadmininfos' => false
+    'canviewadmininfos' => false,
+    'user' => $USER
 ];
 
 $themesettings = new \theme_moove\util\theme_settings();

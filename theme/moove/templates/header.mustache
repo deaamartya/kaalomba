@@ -24,7 +24,7 @@
 
 {{> theme_moove/accessibilitybar }}
 
-<nav class="fixed-top navbar navbar-light navbar-expand moodle-has-zindex">
+<nav class="navbar navbar-light navbar-expand moodle-has-zindex">
     <a href="{{{ config.wwwroot }}}" class="navbar-brand {{# output.get_logo }}has-logo{{/ output.get_logo }}
         {{^ output.get_logo }}
             d-none d-sm-inline
@@ -47,15 +47,6 @@
         {{{ output.page_heading_menu }}}
     </ul>
     <ul class="nav navbar-nav ml-auto">
-        <div class="d-none d-lg-block">
-            {{{ output.search_box }}}
-        </div>
-
-        <li class="nav-item lang-menu">
-            {{{ output.render_lang_menu }}}
-        </li>
-
-        {{{ output.navbar_plugin_output }}}
 
         {{{ output.user_menu }}}
     </ul>

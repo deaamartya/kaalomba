@@ -376,7 +376,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         $avatarclasses = "avatars";
         $avatarcontents = html_writer::span($opts->metadata['useravatar'], 'avatar current');
-        $usertextcontents = '';
+        $usertextcontents = html_writer::span($opts->metadata['userfullname'],'value');
 
         // Other user.
         if (!empty($opts->metadata['asotheruser'])) {
@@ -426,8 +426,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
         }
 
         $returnstr .= html_writer::span(
-            html_writer::span($usertextcontents, 'usertext') .
-            html_writer::span($avatarcontents, $avatarclasses),
+            html_writer::span($avatarcontents, $avatarclasses) .
+            html_writer::span($usertextcontents, 'usertext'),
             'userbutton'
         );
 

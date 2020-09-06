@@ -56,11 +56,11 @@
             {{>theme_moove/mydashboard_admin}}
         {{/canviewadmininfos}}
         {{^canviewadmininfos}}
-            {{{ output.full_header }}}
+            {{>theme_moove/mydashboard_user}}
         {{/canviewadmininfos}}
 
         <div id="page-content" class="row">
-            <div id="region-main-box" class="col-xs-12">
+            <div id="region-main-box" class="col">
                 {{#hasregionmainsettingsmenu}}
                 <div id="region-main-settings-menu" class="hidden-print">
                     <div> {{{ output.region_main_settings_menu }}} </div>
@@ -73,6 +73,7 @@
                                 <div class="region_main_settings_menu_proxy"></div>
                             {{/hasregionmainsettingsmenu}}
                             {{{ output.course_content_header }}}
+                            {{>theme_moove/content_dashboard_user}}
                             {{{ output.main_content }}}
                             {{{ output.course_content_footer }}}
                         </div>
