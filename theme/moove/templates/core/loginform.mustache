@@ -126,20 +126,12 @@
                     <i class="fa fa-check-circle-o"></i>
                     {{#str}} cookiesenabled {{/str}}
                     {{{cookieshelpiconformatted}}}
+                    <img id="gambarlogin"/>
                 </div>
 
-                {{#canloginasguest}}
-                    <div class="m-t-2">
-                        <p><i class="fa fa-user-circle-o"></i> {{#str}}someallowguest{{/str}}</p>
-                        <form action="{{loginurl}}" method="post" id="guestlogin">
-                            <input type = "hidden" name = "logintoken" value = "{{logintoken}}">
-                            <input type="hidden" name="username" value="guest" />
-                            <input type="hidden" name="password" value="guest" />   
-                            <input type="hidden" name="logintoken" value="{{logintoken}}">
-                            <button class="btn btn-secondary" type="submit">{{#str}}loginguest{{/str}}</button>
-                        </form>
-                    </div>
-                {{/canloginasguest}}
+                {{instructions}}
+
+                
 
                 {{#hasidentityproviders}}
                     <h3 class="m-t-1">{{#str}} potentialidps, auth {{/str}}</h3>
