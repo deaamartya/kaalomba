@@ -116,11 +116,11 @@ if (!empty($CFG->customfrontpageinclude)) {
     echo $courserenderer->frontpage_section1();
 }
 // Include course AJAX.
-include_course_ajax($SITE, $modnamesused);
+// include_course_ajax($SITE, $modnamesused);
 
-echo $courserenderer->frontpage();
+// echo $courserenderer->frontpage();
 
-if ($editing && has_capability('moodle/course:create', context_system::instance())) {
-    echo $courserenderer->add_new_course_button();
-}
+// if ($editing && has_capability('moodle/course:create', context_system::instance())) {
+//     echo $courserenderer->add_new_course_button();
+// }
 echo $OUTPUT->footer();

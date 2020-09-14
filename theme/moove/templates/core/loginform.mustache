@@ -126,12 +126,10 @@
                     <i class="fa fa-check-circle-o"></i>
                     {{#str}} cookiesenabled {{/str}}
                     {{{cookieshelpiconformatted}}}
-                    <img id="gambarlogin"/>
+                    <img src="{{{imgloginurl}}}" class="img-fluid"/>
                 </div>
 
                 {{instructions}}
-
-                
 
                 {{#hasidentityproviders}}
                     <h3 class="m-t-1">{{#str}} potentialidps, auth {{/str}}</h3>
@@ -157,7 +155,7 @@
                 {{/hasidentityproviders}}
             </div>
 
-            <div class="col-md-5 form">
+            <div class="col-md-5 form text-center my-auto px-5">
                 <form action="{{loginurl}}" method="post" id="login">
                     <input id="anchor" type="hidden" name="anchor" value="">
                     <script>document.getElementById('anchor').value = location.hash;</script>

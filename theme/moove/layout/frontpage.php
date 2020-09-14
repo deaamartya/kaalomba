@@ -60,7 +60,7 @@ if (isloggedin()) {
         'navdraweropen' => $navdraweropen,
         'draweropenright' => $draweropenright,
         'regionmainsettingsmenu' => $regionmainsettingsmenu,
-        'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu)
+        'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     ];
 
     // Improve boost navigation.
@@ -116,6 +116,11 @@ if (isloggedin()) {
 
     $bodyattributes = $OUTPUT->body_attributes($extraclasses);
     $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
+    $headerurl = $CFG->wwwroot . "/theme/moove/pix"."/headerimg.svg";
+    $tatacaraurl = $CFG->wwwroot . "/theme/moove/pix"."/tata_cara.svg";
+    $helpurl = $CFG->wwwroot . "/theme/moove/pix"."/help.svg";
+    $waiconurl = $CFG->wwwroot . "/theme/moove/pix"."/whatsapp.svg";
+    $lineiconurl = $CFG->wwwroot . "/theme/moove/pix"."/line.svg";
 
     $templatecontext = [
         'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
@@ -132,14 +137,19 @@ if (isloggedin()) {
         'sponsorsfrontpage' => $sponsorsfrontpage,
         'clientsfrontpage' => $clientsfrontpage,
         'disablefrontpageloginbox' => $disablefrontpageloginbox,
-        'logintoken' => \core\session\manager::get_login_token()
+        'logintoken' => \core\session\manager::get_login_token(),
+        'headerimgurl' => $headerurl,
+        'tatacaraurl' => $tatacaraurl,
+        'helpurl' => $helpurl,
+        'waiconurl' => $waiconurl,
+        'lineiconurl' => $lineiconurl,
     ];
 
     $templatecontext = array_merge($templatecontext, $themesettings->footer_items(), $themesettings->marketing_items());
 
-    if ($sliderfrontpage) {
-        $templatecontext = array_merge($templatecontext, $themesettings->slideshow());
-    }
+    // if ($sliderfrontpage) {
+    //     $templatecontext = array_merge($templatecontext, $themesettings->slideshow());
+    // }
 
     if ($numbersfrontpage) {
         $templatecontext = array_merge($templatecontext, $themesettings->numbers());

@@ -45,50 +45,50 @@
     {{>theme_moove/inc_start}}
 
     <div id="page" class="container-fluid">
-        <div id="page-header" class="frontpage-guest-header">
+        {{{ output.main_content }}}
 
-            {{#sliderenabled}}
-                {{#sliderfrontpage}}
-                    {{>theme_moove/slideshow}}
-
-                    {{^disablefrontpageloginbox}}
-                        <div id="loginbox" class="d-none d-lg-block">
-                            <div class="card" id="boxForm">
-                                {{>theme_moove/frontpage_login}}
-                            </div>
-                        </div>
-                    {{/disablefrontpageloginbox}}
-                {{/sliderfrontpage}}
-            {{/sliderenabled}}
-
-            {{^sliderenabled}}
-                <div class="row" id="loginbox">
-                    <div class="col-sm-12 hidden-sm-down {{#disablefrontpageloginbox}}col-md-12{{/disablefrontpageloginbox}}{{^disablefrontpageloginbox}}col-md-7{{/disablefrontpageloginbox}}" id="intro">
-                        {{#bannerheading}}
-                            <h1>{{{ bannerheading }}}</h1>
-                        {{/bannerheading}}
-                        {{#bannercontent}}
-                            <h2>{{{ bannercontent }}}</h2>
-                        {{/bannercontent}}
-                    </div>
-                    {{^disablefrontpageloginbox}}
-                        <div class="col-12 col-sm-12 col-md-5 card d-none d-lg-block" id="boxForm">
-                            {{>theme_moove/frontpage_login}}
-                        </div><!-- end of .card-body -->
-                    {{/disablefrontpageloginbox}}
-                </div> <!-- end of #boxForm -->
-            {{/sliderenabled}}
+        <div class="row py-5 mr-0">
+            <div class="col-12 col-xl-6 text-center">
+                <img class="img-fluid" src="{{{ headerimgurl }}}">
+            </div>
+            <div class="col-12 col-xl-6 my-auto">
+                <h1 class="welcomeheading ml-3">{{{ bannerheading }}},</h1>
+                <h2 class="welcomecontent ml-3">{{{ bannercontent }}}</h2>
+            </div>
         </div>
 
-        {{>theme_moove/frontpage_marketing}}
-
-        <div class="container frontpage-maincontent">
-          {{{ output.main_content }}}
+        <div class="row py-5 mr-0">
+            <div class="col-12 col-xl-5 text-left">
+                <img class="img-fluid" src="{{{ tatacaraurl }}}">
+            </div>
+            <div class="col-12 col-xl-7 my-auto">
+                <h2 class="ml-3"> 1. Login sesuai dengan akun yang tercantum di <strong><i>kartu peserta. </i></strong></h2>
+                <h2 class="ml-3"> 2. Pilih <strong><i>“Preliminary Event” </i></strong> atau <strong><i>“Main Event”</i></strong> </h2>
+                <h2 class="ml-3"> 3. Pilih <strong><i>quiz</i></strong> yang akan dikerjakan dan <strong><i>baca deskripsi</i></strong> quiz terlebih dahulu. </h2>
+                <h2 class="ml-3"> 4. Buka link pertemuan <strong><i>Zoom.</i></strong> Pastikan <strong><i>kamera menyala.</i></strong> </h2>
+                <h2 class="ml-3"> 5. Klik <strong><i>“Start Attempt”.</i></strong> </h2>
+                <h2 class="ml-3"> 6. Masukkan <strong><i>password</i></strong> yang akan diinfokan oleh panitia. </h2>
+            </div>
         </div>
 
-        {{>theme_moove/frontpage_numbers}}
-
-        {{>theme_moove/frontpage_sponsorsclients}}
+        <div class="row py-5 mr-0">
+            <div class="col-12 col-xl-6 text-center">
+                <img class="img-fluid" src="{{{ helpurl }}}">
+            </div>
+            <div class="col-12 col-xl-6 my-auto">
+                <h1 class="welcomeheading ml-3">Butuh Bantuan ?</h1>
+                <div class="row ml-3 align-items-center">
+                    <h2 class="welcomecontent">
+                        <img width="40" src="{{{waiconurl}}}"><h4 class="ml-3">081333654616</h4>
+                    </h2>
+                </div>
+                <div class="row ml-3 align-items-center">
+                    <h2 class="welcomecontent">
+                        <img width="40" src="{{{lineiconurl}}}"><h4 class="ml-3">@kaa2020</h4>
+                    </h2>
+                </div>
+            </div>
+        </div>
     </div>
 
 {{>theme_moove/inc_end}}

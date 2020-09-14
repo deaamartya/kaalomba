@@ -148,6 +148,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         $context->logourl = $this->get_logo();
 
+        $context->imgloginurl = $this->get_pix_image_url_base()."/login_img.svg";
+
         $context->sitename = format_string($SITE->fullname, true,
             ['context' => \context_course::instance(SITEID), "escape" => false]);
 
@@ -166,6 +168,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $context = $form->export_for_template($this);
 
         $context['logourl'] = $this->get_logo();
+
+        $context['imgloginurl'] = $this->get_pix_image_url_base()."/login_img.svg";
 
         $context['sitename'] = format_string($SITE->fullname, true,
             ['context' => \context_course::instance(SITEID), "escape" => false]);
