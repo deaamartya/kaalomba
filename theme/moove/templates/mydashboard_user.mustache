@@ -1,9 +1,31 @@
 <div class="admininfos">
-	{{{ output.mydashboard_admin_header }}}
-	<div class="row">
+    {{{ output.mydashboard_admin_header }}}
+    <div class="row mx-4 mt-4">
         <h1>Welcome,</h1>
     </div>
-    <div class="row">
+    <div class="row mx-4">
         <h1>{{{user.firstname}}} !</h1>
     </div>
+
+    <div class="row justify-content-start mx-0 my-2" id="row-dashboard-admin">
+      <div class="col-12 col-lg-4 col-xl-4">
+          <!-- small box -->
+          <div class="small-box bg-1">
+            <div class="inner">
+              <h2 class="mb-5">Preliminary Event</h2>
+            </div>
+            <a href="#" class="button-preevent"><button class="btn btn-block btn-primary"><b>MASUK</b></button></a>
+          </div>
+      </div>
+
+      <div class="col-12 col-lg-4 col-xl-4">
+        <!-- small box -->
+        <div class="small-box bg-2">
+          <div class="inner">
+            <h2 class="mb-5">Main Event</h2>
+          </div>
+          <a href="#" class="button-mainevent"><button class="btn btn-block btn-danger"><b>MASUK</b></button></a>
+        </div>
+      </div>
+  </div>
 </div>

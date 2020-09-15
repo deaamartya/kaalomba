@@ -51,11 +51,12 @@ if ($draweropenright && $hasblocks) {
 
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
+
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
     'sidepreblocks' => $blockshtml,
-    'hasblocks' => $hasblocks,
+    'hasblocks' => true,
     'bodyattributes' => $bodyattributes,
     'hasdrawertoggle' => true,
     'navdraweropen' => $navdraweropen,
@@ -71,13 +72,6 @@ $themesettings = new \theme_moove\util\theme_settings();
 $templatecontext = array_merge($templatecontext, $themesettings->footer_items());
 
 if (is_siteadmin() && $PAGE->pagetype == 'my-index') {
-    $adminifos = new \theme_moove\util\admininfos();
-
-    $templatecontext['totalusage'] = $adminifos->get_totaldiskusage();
-    $templatecontext['totalactiveusers'] = $adminifos->get_totalactiveusers();
-    $templatecontext['totalsuspendedusers'] = $adminifos->get_suspendedusers();
-    $templatecontext['totalcourses'] = $adminifos->get_totalcourses();
-    $templatecontext['onlineusers'] = $adminifos->get_totalonlineusers();
 
     $templatecontext['canviewadmininfos'] = true;
 }
