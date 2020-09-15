@@ -24,30 +24,30 @@
 
 {{> theme_moove/accessibilitybar }}
 
-<nav class="navbar navbar-light navbar-expand moodle-has-zindex">
-    <a href="{{{ config.wwwroot }}}" class="navbar-brand {{# output.get_logo }}has-logo{{/ output.get_logo }}
-        {{^ output.get_logo }}
-            d-none d-sm-inline
-        {{/ output.get_logo }}
-            ">
-        {{# output.get_logo }}
-            <span class="logo d-none d-sm-inline">
-                <img src="{{output.get_logo}}" alt="{{sitename}}">
-            </span>
-        {{/ output.get_logo }}
-        {{^ output.get_logo }}
-            <span class="site-name d-none d-md-inline">{{{ sitename }}}</span>
-        {{/ output.get_logo }}
-    </a>
+<nav class="navbar navbar-light navbar-expand-lg static-top p-0">
+    <div class="container-fluid p-2" id="container-navbar">
+        <a href="{{{ config.wwwroot }}}" class="navbar-brand {{# output.get_logo }}has-logo{{/ output.get_logo }}">
+            {{# output.get_logo }}
+        <span class="logo">
+        <img src="{{output.get_logo}}" alt="{{sitename}}">
+        </span>
+            {{/ output.get_logo }}
+            {{^ output.get_logo }}
+        <span class="site-name">{{{ sitename }}}</span>
+            {{/ output.get_logo }}
+        </a>
 
-    <ul class="navbar-nav d-none d-md-flex custom-menus">
-        <!-- custom_menu -->
-        {{{ output.custom_menu }}}
-        <!-- page_heading_menu -->
-        {{{ output.page_heading_menu }}}
-    </ul>
-    <ul class="nav navbar-nav ml-auto">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo1" aria-controls="navbarTogglerDemo1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        {{{ output.user_menu }}}
-    </ul>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo1">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                {{{ output.custom_menu }}}
+            </ul>
+            <ul class="nav navbar-nav">
+                {{{ output.user_menu }}}
+            </ul>
+        </div>
+    </div>
 </nav>
