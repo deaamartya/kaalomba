@@ -51,14 +51,6 @@
     {{>theme_moove/inc_start}}
 
     <div id="page-dashboard-admin" class="container-fluid">
-
-        {{#canviewadmininfos}}
-            {{>theme_moove/mydashboard_admin}}
-        {{/canviewadmininfos}}
-        {{^canviewadmininfos}}
-            {{>theme_moove/mydashboard_user}}
-        {{/canviewadmininfos}}
-
         <div id="page-content" class="row">
             <div id="region-main-box" class="col">
                 {{#hasregionmainsettingsmenu}}
@@ -78,6 +70,12 @@
                         </div>
                     </div>
                 </section>
+                {{#canviewadmininfos}}
+                    {{>theme_moove/mydashboard_admin}}
+                {{/canviewadmininfos}}
+                {{^canviewadmininfos}}
+                    {{>theme_moove/mydashboard_user}}
+                {{/canviewadmininfos}}
             </div>
         </div>
     </div>
